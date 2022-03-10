@@ -16,6 +16,8 @@ jobs:
         compiler: gcc
     - name: compile binary
       run: g++ a.cpp -o a.exe
+    - name: test
+      run: a.exe
     - name: upload artifact
       uses: actions/upload-artifact@v3
       with:
@@ -31,6 +33,8 @@ jobs:
         compiler: gcc
     - name: compile binary
       run: g++ a.cpp -o a
+    - name: test
+      run: ./a
     - name: upload artifact
       uses: actions/upload-artifact@v3
       with:
@@ -46,6 +50,8 @@ jobs:
         compiler: gcc
     - name: compile binary
       run: g++ a.cpp -o a
+    - name: test
+      run: ./a
     - name: upload artifact
       uses: actions/upload-artifact@v3
       with:
