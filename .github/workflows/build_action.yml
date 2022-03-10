@@ -8,47 +8,47 @@ on:
 jobs:
   build_win:
     runs-on: windows-latest
-  steps:
-  - uses: actions/checkout@v2
-  - name: setup cpp
-    uses: aminya/setup-cpp@v1
-    with:
-      compiler: gcc
-  - name: compile binary
-    run: g++ a.cpp -o a.exe
-  - name: upload artifact
-    uses: actions/upload-artifact@v3
-    with:
-      name: a_win
-    path: a.exe
+    steps:
+    - uses: actions/checkout@v2
+    - name: setup cpp
+      uses: aminya/setup-cpp@v1
+      with:
+        compiler: gcc
+    - name: compile binary
+      run: g++ a.cpp -o a.exe
+    - name: upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: a_win
+        path: a.exe
   build_linux:
     runs-on: ubuntu-latest
-  steps:
-  - uses: actions/checkout@v2
-  - name: setup cpp
-    uses: aminya/setup-cpp@v1
-    with:
-      compiler: gcc
-  - name: compile binary
-    run: g++ a.cpp -o a
-  - name: upload artifact
-    uses: actions/upload-artifact@v3
-    with:
-      name: a_linux
-    path: a
+    steps:
+    - uses: actions/checkout@v2
+    - name: setup cpp
+      uses: aminya/setup-cpp@v1
+      with:
+        compiler: gcc
+    - name: compile binary
+      run: g++ a.cpp -o a
+    - name: upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: a_linux
+        path: a
   build_darwin:
     runs_on: macos-latest
-  steps:
-  - uses: actions/checkout@v2
-  - name: setup cpp
-    uses: aminya/setup-cpp@v1
-    with:
-      compiler: gcc
-  - name: compile binary
-    run: g++ a.cpp -o a
-  - name: upload artifact
-    uses: actions/upload-artifact@v3
-    with:
-      name: a_darwin
-    path: a
+    steps:
+    - uses: actions/checkout@v2
+    - name: setup cpp
+      uses: aminya/setup-cpp@v1
+      with:
+        compiler: gcc
+    - name: compile binary
+      run: g++ a.cpp -o a
+    - name: upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: a_darwin
+        path: a
 
