@@ -37,7 +37,7 @@ jobs:
         name: a_linux
         path: a
   build_darwin:
-    runs_on: macos-latest
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
     - name: setup cpp
